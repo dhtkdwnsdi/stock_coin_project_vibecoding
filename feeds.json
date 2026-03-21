@@ -8,7 +8,5 @@
   "코인": [
     "https://www.coindesk.com/arc/outboundfeeds/rss/"
   ],
-  "매크로": [
-    "https://www.reutersagency.com/feed/?best-topics=business&post_type=best"
-  ]
+  "매크로": []
 }
