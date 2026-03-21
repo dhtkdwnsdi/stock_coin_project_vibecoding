@@ -5,7 +5,8 @@
     "https://www.yna.co.kr/rss/market.xml"
   ],
   "미국주식": [
-    "https://finance.yahoo.com/news/rssindex"
+    "https://finance.yahoo.com/news/rssindex",
+    "https://www.investing.com/rss/news_25.rss"
   ],
   "코인": [
     "https://www.coindesk.com/arc/outboundfeeds/rss/"
