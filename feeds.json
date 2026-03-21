@@ -5,6 +5,8 @@
   "미국주식": [
     "https://finance.yahoo.com/news/rssindex"
   ],
-  "코인": [],
+  "코인": [
+    "https://www.coindesk.com/arc/outboundfeeds/rss/"
+  ],
   "매크로": []
 }
