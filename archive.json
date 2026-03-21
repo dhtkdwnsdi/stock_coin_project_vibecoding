@@ -1,1 +1,8 @@
-{}
+{
+  "2026-03-21": {
+    "국내주식": "### AI 리포트 생성 중 오류 발생\n404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "미국주식": "### AI 리포트 생성 중 오류 발생\n404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "코인": "### AI 리포트 생성 중 오류 발생\n404 models/gemini-1.5-flash is not found for API version v1beta, or is not supported for generateContent. Call ListModels to see the list of available models and their supported methods.",
+    "매크로": "최근 3일간 수집된 뉴스가 없습니다."
+  }
+}
