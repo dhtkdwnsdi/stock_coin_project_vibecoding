@@ -9,6 +9,7 @@
     "https://www.coindesk.com/arc/outboundfeeds/rss/"
   ],
   "매크로": [
-    "https://www.globalmacroresearch.org/feed/"
+    "https://www.globalmacroresearch.org/feed/",
+    "https://www.investing.com/rss/news_25.rss"
   ]
 }
