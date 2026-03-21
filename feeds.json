@@ -1,6 +1,7 @@
 {
   "국내주식": [
-    "https://www.mk.co.kr/rss/30100041/"
+    "https://www.mk.co.kr/rss/30100041/",
+    "https://kr.investing.com/rss/news_25.rss"
   ],
   "미국주식": [
     "https://finance.yahoo.com/news/rssindex"
