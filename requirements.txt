@@ -1,0 +1,11 @@
+streamlit
+pandas
+yfinance
+matplotlib
+seaborn
+google-generativeai
+fpdf2
+markdown
+PyGithub
+feedparser
+python-dateutil
