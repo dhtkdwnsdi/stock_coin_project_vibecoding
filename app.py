@@ -78,26 +78,45 @@ def show_adsense():
         client_id = ""
         slot_id = ""
         
-    if not client_id or not slot_id:
+    if not client_id:
         return # Skip rendering if credentials are not configured
         
-    adsense_code = f"""
-    <div style="text-align: center;">
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_id}"
-         crossorigin="anonymous"></script>
-    <ins class="adsbygoogle"
-         style="display:block"
-         data-ad-client="{client_id}"
-         data-ad-slot="{slot_id}"
-         data-ad-format="auto"
-         data-full-width-responsive="true"></ins>
-    <script>
-         (adsbygoogle = window.adsbygoogle || []).push({{}});
-    </script>
-    </div>
-    """
     import streamlit.components.v1 as components
-    components.html(adsense_code, height=250)
+
+    if not slot_id:
+        # For Site Approval/Verification: Inject into parent document head
+        verify_code = f"""
+        <script>
+            try {{
+                var script = window.parent.document.createElement('script');
+                script.async = true;
+                script.src = "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_id}";
+                script.crossOrigin = "anonymous";
+                window.parent.document.head.appendChild(script);
+            }} catch (e) {{
+                console.log("AdSense Verification: Cannot access parent window due to CORS.");
+            }}
+        </script>
+        """
+        components.html(verify_code, height=0, width=0)
+    else:
+        # Display Actual Ad
+        adsense_code = f"""
+        <div style="text-align: center;">
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={client_id}"
+             crossorigin="anonymous"></script>
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="{client_id}"
+             data-ad-slot="{slot_id}"
+             data-ad-format="auto"
+             data-full-width-responsive="true"></ins>
+        <script>
+             (adsbygoogle = window.adsbygoogle || []).push({{}});
+        </script>
+        </div>
+        """
+        components.html(adsense_code, height=250)
 
 # -----------------
 # Main App
